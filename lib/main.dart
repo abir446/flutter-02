@@ -1,4 +1,5 @@
 import 'package:counter/pages/counter.dart';
+import 'package:counter/pages/input_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,9 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Counter(),
+      home: const Counter(),
+      
+      routes: {'/input': (context) => const InputPage()},
     );
   }
 }
